@@ -18,8 +18,9 @@ const App = () => {
   const calculateAge = useCallback(() => {
     const today = dayjs();
     const birthDateObj = dayjs(birthdate);
+    const fullYear = new Date(birthdate).getFullYear();
 
-    if (birthDateObj > today) {
+    if (birthDateObj >= today) {
       setError("Birthdate cannot be in the future.");
       return 0;
     }
@@ -34,7 +35,17 @@ const App = () => {
     const diffMonths = today.diff(birthDateObj, "month");
     const diffYears = today.diff(birthDateObj, "year");
 
-    if (diffWeeks > 4696) {
+    if (diffDays == 0) {
+      setError("Today? Really?");
+      return 0;
+    }
+
+    if (diffWeeks <= 1) {
+      setError("You are less than 1 week old.");
+      return 0;
+    }
+
+    if (diffWeeks > 4696 || fullYear < 1900) {
       setError("Congratulations! You are better than 4696 weeks!");
       return 0;
     }
@@ -79,7 +90,7 @@ const App = () => {
           <button
             onClick={() => {
               calculateAge();
-              if (weeks > 0) {
+              if (weeks > 0 && weeks <= 4696) {
                 setModal(true);
               }
             }}
