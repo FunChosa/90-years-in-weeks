@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Oxanium:200,300,regular,500,600,700,800);
+
+:root {
+  font-family: "Oxanium", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: #111;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50rem;
+}
+
+.container {
+  /* width: 100vw; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.header span {
+  color: #238636;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.board {
+  padding: 2rem;
+}
+
+.board span {
+  color: #fff;
+  font-weight: 200;
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.passed-cell,
+.cell {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 2px;
+  box-shadow: 0 0 2px #000;
+  transition: 0.3s ease-in-out;
+}
+
+.passed-cell {
+  background: #238636;
+}
+
+.cell {
+  background: #1d1d1d;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 7rem;
+  cursor: pointer;
+  background-color: #238636;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  height: 36.5px;
+  cursor: pointer;
+  font-family: "Oxanium", sans-serif;
+  transition: 0.3s ease-in-out;
+
+  &:hover && &:not(:disabled) {
+    background-color: #29a442;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+  }
+}
+
+input[type="date"] {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: #1d1d1d;
+  color: #fff;
+}
+
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.popup {
+  background-color: aliceblue;
+  border-radius: 5px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin-top: 14rem;
+}
