@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
-import Board from "./components/Board/Board";
-import Popup from "./components/Popup/Popup";
+import Board from "./components/Board";
+import Popup from "./components/Popup";
 import dayjs from "dayjs";
 
 const App = () => {

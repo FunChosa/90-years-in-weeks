@@ -7,7 +7,6 @@ const Board = ({ weeks }) => {
   return (
     <>
       <div className="board">
-        <span> weeks →</span>
         {Array.from({ length: rows }).map((_, rowIndex) => (
           <div key={rowIndex} className="row">
             {Array.from({ length: cols }).map((_, colIndex) => {

@@ -1,15 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Oxanium:200,300,regular,500,600,700,800);
 
 :root {
+  --color-1: #7231ff;
+  --color-2: #103511;
+}
+
+* {
   font-family: "Oxanium", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-  --color-1: #4caf50;
-  --color-2: #103511;
-  /* --color-1: rgb(61, 160, 246);
-  --color-2: rgb(31, 81, 124); */
 }
 
 *::-webkit-scrollbar {
@@ -48,13 +48,6 @@ body {
 
 .board {
   padding: 2rem;
-}
-
-.board span {
-  color: #fff;
-  font-weight: 200;
-  font-size: 1rem;
-  opacity: 0.5;
 }
 
 .row {
@@ -138,4 +131,10 @@ input[type="date"] {
   box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
 }
